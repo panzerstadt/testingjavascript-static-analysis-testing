@@ -8,6 +8,7 @@
     "eslint": "^6.0.1",
     "flow-bin": "^0.102.0",
     "husky": "^3.0.0",
+    "lint-staged": "^9.1.0",
     "prettier": "^1.18.2"
   },
   "scripts": {
@@ -15,6 +16,6 @@
     "format": "prettier --list-different --write \"**/*.+(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|mdx|graphql|vue)\"",
     "flow": "flow",
     "validate": "yarn lint && yarn format && yarn flow",
-    "precommit": "yarn validate"
+    "precommit": "lint-staged && yarn flow"
   }
 }
