@@ -15,6 +15,6 @@
     "format": "prettier --list-different --write \"**/*.+(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|mdx|graphql|vue)\"",
     "flow": "flow",
     "validate": "yarn lint && yarn format && yarn flow",
-    "precommit": "validate"
+    "precommit": "yarn validate"
   }
 }
