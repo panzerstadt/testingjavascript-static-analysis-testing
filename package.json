@@ -14,9 +14,10 @@
   },
   "scripts": {
     "lint": "eslint src",
-    "format": "prettier --list-different --write \"**/*.+(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|mdx|graphql|vue)\"",
+    "prettier": "prettier \"**/*.+(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|mdx|graphql|vue)\"",
+    "format": "yarn prettier --write ",
     "flow": "flow",
-    "validate": "yarn lint && yarn format && yarn flow",
+    "validate": "yarn lint && yarn prettier --list-different && yarn flow",
     "precommit": "lint-staged && yarn flow"
   }
 }
